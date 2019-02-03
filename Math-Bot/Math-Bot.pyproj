@@ -25,6 +25,9 @@
     <Compile Include="Scripts\behavior\math_basis.py" />
     <Compile Include="Scripts\behavior\__init__.py" />
     <Compile Include="Scripts\Math_Bot.py" />
+    <Compile Include="Scripts\tests\math_test.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.6" />
@@ -32,6 +35,7 @@
   <ItemGroup>
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\behavior\" />
+    <Folder Include="Scripts\tests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\token.txt" />

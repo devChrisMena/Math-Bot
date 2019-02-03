@@ -41,4 +41,8 @@ async def on_message(message):
     elif message.content.startswith('!sleep'):
         await asyncio.sleep(5)
         await client.send_message(message.channel, 'Done sleeping')
+    elif message.content.startswith('!graph'):
+        call = graph(message.content)
+        call.plot()
+        await client.send_file(message.channel, 'graph.png')
 client.run(token)
