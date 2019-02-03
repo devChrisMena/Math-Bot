@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0a531a70-35e3-4aa7-a343-9c9ec3c5436d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Math_Bot.py</StartupFile>
+    <StartupFile>Scripts\Math_Bot.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>Math-Bot</Name>
     <RootNamespace>Math-Bot</RootNamespace>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Math_Bot.py" />
+    <Compile Include="Scripts\behavior\math_basis.py" />
+    <Compile Include="Scripts\behavior\__init__.py" />
+    <Compile Include="Scripts\Math_Bot.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\behavior\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\token.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
